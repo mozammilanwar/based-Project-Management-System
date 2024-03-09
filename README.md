@@ -123,7 +123,7 @@ Run the Application
 
 ### 4. Update a Project (PUT):
 
-- **URL:** `http://localhost:8080/projects/{id}` (replace `{id}` with an actual project ID)
+- **URL:** `http://localhost:7171/projects/{id}` (replace `{id}` with an actual project ID)
 - **Method:** `PUT`
 - **Body:**
     ```json
