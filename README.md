@@ -69,21 +69,73 @@ Run the Application
 - Run the Spring Boot application.
 
 
-## Test the CRUD operations using tools like Postman or curl.
-Postman Usage
-1. Create a New Project (POST)
-   Set the request type to POST.
-   Enter the URL for creating a new project (e.g., http://localhost:7171/projects).
-   Go to the "Body" tab and provide the project details in JSON format.
-   Click "Send" to create the project.
-2. Get All Projects (GET)
-   Set the request type to GET.
-   Enter the URL for retrieving all projects (e.g., http://localhost:7171/projects).
-   Click "Send" to get a list of all projects.
-   ...
+## Project Setup
 
-## Contributing
-- Feel free to contribute to this project by opening issues or creating pull requests.
+1. Clone the repository:
 
-## License
-- This project is licensed under the MIT License - see the LICENSE file for details.
+    ```bash
+    git clone https://github.com/mozammilanwar/based-Project-Management-System.git
+    ```
+
+2. Open the project in your preferred IDE.
+
+3. Build the project:
+
+    ```bash
+    mvn clean install
+    ```
+
+## Run the Application
+
+1. Start the Spring Boot application:
+
+    ```bash
+    mvn spring-boot:run
+    ```
+
+   The application will be accessible at `http://localhost:7171`.
+
+## Test CRUD Operations in Postman
+
+### 1. Create a New Project (POST):
+
+- **URL:** `http://localhost:7171/projects`
+- **Method:** `POST`
+- **Body:**
+    ```json
+    {
+      "name": "Project A",
+      "description": "This is Project A",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31"
+    }
+    ```
+
+### 2. Get All Projects (GET):
+
+- **URL:** `http://localhost:7171/projects`
+- **Method:** `GET`
+
+### 3. Get a Specific Project by ID (GET):
+
+- **URL:** `http://localhost:7171/projects/{id}` (replace `{id}` with an actual project ID)
+- **Method:** `GET`
+
+### 4. Update a Project (PUT):
+
+- **URL:** `http://localhost:8080/projects/{id}` (replace `{id}` with an actual project ID)
+- **Method:** `PUT`
+- **Body:**
+    ```json
+    {
+      "name": "Updated Project A",
+      "description": "This is the updated Project A",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31"
+    }
+    ```
+
+### 5. Delete a Project (DELETE):
+
+- **URL:** `http://localhost:8080/projects/{id}` (replace `{id}` with an actual project ID)
+- **Method:** `DELETE`
